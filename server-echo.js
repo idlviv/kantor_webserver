@@ -14,7 +14,7 @@ server.listen(4200, '127.0.0.1');
 
 server.on('request', function(req, res) {
   var urlParsed = url.parse(req.url, true);
-  debugger;
+  //console.log(urlParsed);
   if (urlParsed.pathname = '/echo' && urlParsed.query.message) {
     // res.writeHead(200, 'OK', {'Cache-control': 'no-cache'}); // записує заголовок зразу
     res.setHeader('Cache-control', 'no-cache'); // записує заголовок при першій передачі даних (тут в res.end)
